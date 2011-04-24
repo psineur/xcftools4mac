@@ -1,0 +1,19 @@
+.TP 8
+\fB--mask\fR
+Enable the layer mask.
+.TP 8
+\fB--mode\fR \fImode\fR
+Set the layer mode (e.g.,
+.B Normal
+or
+.BR Multiply ).
+.TP 8
+\fB--nomask\fR
+Disable the layer mask.
+.TP 8
+\fB--opacity\fR \fIn\fR
+Set the opacity on a scale from 0 to 255 (as used internally)
+.TP 8
+\fB--percent\fR \fIn\fR
+Set the opacity on a scale from 0 to 100
+(as in the Gimp user interface).

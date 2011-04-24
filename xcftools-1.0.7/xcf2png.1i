@@ -1,0 +1,132 @@
+.TP 8
+\fB\-A\fR, \fB--force-alpha\fR
+Invent a trivial alpha channel even if the flattened image is
+completely opaque.
+.TP 8
+\fB\-b\fR \fIcolor\fR, \fB--background\fR \fIcolor\fR
+Use this color for transparent pixels in the image.
+The color can be given as
+.B #rrggbb
+or
+.B #rgb
+hexadecimal values,
+or as an X11 color name
+(which will only work if a color name database can be found
+in one of a number of standard locations).
+.TP 8
+\fB\-c\fR, \fB--color\fR, \fB--colour\fR
+Force the output to use RGB color space even if it there are
+more compact alternatives.
+.TP 8
+\fB\-C\fR, \fB--autocrop\fR
+Set the converted part of the image such that it just include
+the boundaries of the visible (or selected) layers.
+This may make it either smaller or larger than the canvas,
+depending on the position and size of the visible layers.
+(Note that the
+.I contents
+of the layers is not taken into account when autocropping).
+.IP
+In the absence of options that specify otherwise, the converted
+image will cover the entire XCF canvas.
+.TP 8
+\fB\-D\fR, \fB--dissolve\fR
+Do a "dissolve" step to eliminate partial transparency after
+flattening.
+If
+.B \-b
+is also given, this happens before the background color is applied.
+.TP 8
+\fB\-f\fR, \fB--full-image\fR
+First flatten the entire image to a memory buffer before writing
+output. Then analyse the image to decide on the details of the
+output format (e.g., whether a grayscale output is sufficient).
+Without this option, the program flattens only a singe row of "tiles"
+(height 64) at a time.
+.TP 8
+\fB\-g\fR, \fB--gray\fR, \fB--grey\fR
+Force the output to be a grayscale image even if it may be monochrome.
+If any colored pixels are encountered, exit with status 103.
+This will be selected automatically if the output file's name
+ends with
+.BR .pgm .
+.TP 8
+\fB\-G\fR, \fB--for-gif\fR
+Assert that the flattened image will have no partial transparency
+(allowing a more compact representation of the alpha output).
+Exit with status 102 if the flattened image has any partial
+transparency.
+If
+.B \-b
+is also given, this tests whether there there is partial
+transparency before applying the background color.
+.TP 8
+\fB\-h\fR, \fB--help\fR
+Print an option summery to standard output and exit with a
+return code of 0.
+.TP 8
+\fB\-j\fR, \fB--bzip\fR
+Equivalent to
+.BR "\-Z bzcat" .
+Default if the filename ends with
+.BR bz2 .
+.TP 8
+\fB\-o\fR \fIfilename\fR, \fB--output\fR \fIfilename\fR
+Write the converted picture to
+.I filename
+instead of to standard output.
+.TP 8
+\fB\-O\fR \fIx\fB,\fPy\fR, \fB--offset\fR \fIx\fB,\fPy\fR
+Offset the converted part of the image from the top-left corner
+of the XCF canvas. Usually used with
+.BR \-S .
+.TP 8
+\fB\-S\fR \fIw\fBx\fPh\fR, \fB--size\fR \fIw\fBx\fPh\fR
+Crop the converted image to width \fIw\fP and height \fIh\fP.
+.TP 8
+\fB\-T\fR, \fB--truecolor\fR
+Use standard RGB compositing for flattening indexed layers.
+Without this option,
+.B \*p
+will mimic the Gimp's current strategy of rounding each
+alpha value to either full transparency or full opacity,
+and interpret all layer modes as
+.BR Normal .
+.TP 8
+\fB\-u\fR, \fB--utf8\fR
+Use the raw UTF-8 representation from the XCF file to compare
+and display layer names.
+Ordinarily, layer names will be converted to the character set
+of the current locale.
+.TP 8
+\fB\-v\fR, \fB--verbose\fR
+Print progress messages about the conversion to standard error.
+.TP 8
+\fB\-V\fR, \fB--version\fR
+Print the version numer of
+.B xcftools
+to standard output and exit with a return code of 0.
+.TP 8
+\fB\-z\fR, \fB--gzip\fR
+Equivalent to
+.BR "\-Z zcat" .
+Default if the filename ends with
+.BR gz .
+.TP 8
+\fB\-Z\fR \fIcommand\fR, \fB--unpack\fR \fIcommand\fR
+Specify a command that the input file is filtered through
+before being interpreted as an XCF file. The command is invoked as
+.I command filename
+and must produce output to its standard output.
+Note that it is not possible to specify arguments as part of
+.IR command .
+An uncompressor is selected automatically if the filename ends
+with
+.B gz
+or
+.BR bz2 ;
+to suppress this, use
+.B \-Z cat
+(which is implemented without actually starting a
+.BR cat (1)
+process).

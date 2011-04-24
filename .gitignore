@@ -1,19 +1,31 @@
+# XCode noise
+PLBlocks.framework/*
+*.pbxuser
+*.mode1v3
+*.pyc 
+*~.nib/ 
+*.perspective 
+*.perspectivev3
+xcuserdata/
+build/
+
+# old school
+.svn
+
+# osx noise
+.DS_store
+.DS_Store
+
 # Original .cvsignore from xcftools
 Makefile
 autom4te.cache
-config.hin
 config.log
 config.status
 config.guess
 config.sub
 aclocal.m4
-enums.[ch]
 xcfinfo
 xcf2pnm
 xcf2png
 xcfview
-xcf**.1i
-xcf*.1il
-*.1
-xcf*.oi
-options.mi
+*.o
