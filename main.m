@@ -132,7 +132,8 @@ main(int argc,char **argv)
 	NSString *savePath = [NSString stringWithFormat:@"%s", outfile];
 	[documentInfo writeToFile:savePath atomically: YES];
 	
-																
+	
+	/*************** Old Output **************
 	// meta data
 	printf(_("Version %d, %dx%d %s, %d layers, compressed %s\n"),
 		   XCF.version,XCF.width,XCF.height,
@@ -154,6 +155,7 @@ main(int argc,char **argv)
 			printf(_("/mask"));
 		printf(" %s\n",XCF.layers[i].name);
 	}
+	*/
 	
 	return 0 ;
 }
