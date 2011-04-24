@@ -17,6 +17,7 @@
  */
 
 #import "Foundation/Foundation.h"
+#import "DebugLog.h"
 
 #include "xcftools.h"
 #include <stdlib.h>
@@ -90,9 +91,11 @@ main(int argc,char **argv)
 		usage(stderr);
 	}
 	
+	TinyLog(@"Reading XCF file: %s...", infile);
 	read_or_mmap_xcf(infile,unzipper);
 	getBasicXcfInfo();
 	
+	TinyLog(@"Preparing Dictionary...");
 	// Add XCF File info
 	NSMutableDictionary *documentInfo = [NSMutableDictionary dictionaryWithCapacity: 7];
 	[documentInfo setObject: [NSNumber numberWithInt: XCF.version] forKey:@"Version"];
@@ -130,7 +133,9 @@ main(int argc,char **argv)
 	
 	// Save to outfile
 	NSString *savePath = [NSString stringWithFormat:@"%s", outfile];
+	TinyLog(@"Writing Dictionary to %@", savePath);	
 	[documentInfo writeToFile:savePath atomically: YES];
+	TinyLog(@"Done!");
 	
 	[pool release];
 	return 0;
