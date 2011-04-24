@@ -105,7 +105,7 @@ main(int argc,char **argv)
 	// Prepare Layers Array
 	NSMutableArray *layers = [NSMutableArray arrayWithCapacity: (NSUInteger)XCF.numLayers ];
 	
-	for( i = XCF.numLayers ; i-- ; )
+	for( i = 0 ; i < XCF.numLayers ; ++i)
 	{
 		NSMutableDictionary *layer = [NSMutableDictionary dictionaryWithCapacity: 10];
 		[layer setObject:[NSString stringWithFormat:@"%s",XCF.layers[i].name ] forKey:@"Name"];
