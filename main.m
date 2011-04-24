@@ -46,7 +46,7 @@ usage(FILE *where)
 int
 main(int argc,char **argv)
 {
-	NSLog(@"wazzup!");
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
 	int i ;
 	int option ;
@@ -132,30 +132,6 @@ main(int argc,char **argv)
 	NSString *savePath = [NSString stringWithFormat:@"%s", outfile];
 	[documentInfo writeToFile:savePath atomically: YES];
 	
-	
-	/*************** Old Output **************
-	// meta data
-	printf(_("Version %d, %dx%d %s, %d layers, compressed %s\n"),
-		   XCF.version,XCF.width,XCF.height,
-		   _(showGimpImageBaseType(XCF.type)),
-		   XCF.numLayers,
-		   _(showXcfCompressionType(XCF.compression)));
-	
-	// layers data
-	for( i = XCF.numLayers ; i-- ; ) {
-		printf("%c %dx%d%+d%+d %s %s",
-			   XCF.layers[i].isVisible ? '+' : '-',
-			   XCF.layers[i].dim.width, XCF.layers[i].dim.height,
-			   XCF.layers[i].dim.c.l, XCF.layers[i].dim.c.t,
-			   _(showGimpImageType(XCF.layers[i].type)),
-			   _(showGimpLayerModeEffects(XCF.layers[i].mode)));
-		if( XCF.layers[i].opacity < 255 )
-			printf("/%02d%%",XCF.layers[i].opacity * 100 / 255);
-		if( XCF.layers[i].hasMask )
-			printf(_("/mask"));
-		printf(" %s\n",XCF.layers[i].name);
-	}
-	*/
-	
-	return 0 ;
+	[pool release];
+	return 0;
 }
