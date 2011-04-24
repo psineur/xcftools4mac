@@ -1,17 +1,13 @@
 # Original .cvsignore from xcftools
 Makefile
 autom4te.cache
-config.h
 config.hin
 config.log
 config.status
 config.guess
 config.sub
 aclocal.m4
-configure
 enums.[ch]
-table.c
-nlsini.c
 xcfinfo
 xcf2pnm
 xcf2png
