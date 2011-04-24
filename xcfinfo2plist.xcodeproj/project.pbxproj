@@ -20,6 +20,7 @@
 		6DDE18DD13646DA700CECF65 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D513646DA700CECF65 /* table.c */; };
 		6DDE18E313646F8800CECF65 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE18E213646F8800CECF65 /* libiconv.dylib */; };
 		6DDE1919136472BC00CECF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE1918136472BC00CECF65 /* Foundation.framework */; };
+		6DDE19CB1364848C00CECF65 /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE19CA1364848C00CECF65 /* DebugLog.m */; };
 		8DD76FAC0486AB0100D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76FB00486AB0100D96B5E /* xcfinfo2plist.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,8 @@
 		6DDE18D513646DA700CECF65 /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = table.c; sourceTree = "<group>"; };
 		6DDE18E213646F8800CECF65 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		6DDE1918136472BC00CECF65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6DDE19C91364848C00CECF65 /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugLog.h; sourceTree = "<group>"; };
+		6DDE19CA1364848C00CECF65 /* DebugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugLog.m; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* xcfinfo2plist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo2plist; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = xcfinfo2plist.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +94,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6DDE19C91364848C00CECF65 /* DebugLog.h */,
+				6DDE19CA1364848C00CECF65 /* DebugLog.m */,
 				6DDE18B0136458A700CECF65 /* xcftools-1.0.7 */,
 				08FB7796FE84155DC02AAC07 /* main.m */,
 			);
@@ -218,6 +223,7 @@
 				6DDE18DB13646DA700CECF65 /* pixels.c in Sources */,
 				6DDE18DC13646DA700CECF65 /* scaletab.c in Sources */,
 				6DDE18DD13646DA700CECF65 /* table.c in Sources */,
+				6DDE19CB1364848C00CECF65 /* DebugLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
