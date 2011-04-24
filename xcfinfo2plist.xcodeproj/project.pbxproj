@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6DDE18BB1364596B00CECF65 /* xcfinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18BA1364596B00CECF65 /* xcfinfo.c */; };
 		6DDE18C113646CCD00CECF65 /* enums.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C013646CCD00CECF65 /* enums.c */; };
 		6DDE18CA13646D6800CECF65 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C813646D6800CECF65 /* utils.c */; };
 		6DDE18CB13646D6800CECF65 /* xcf-general.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C913646D6800CECF65 /* xcf-general.c */; };
@@ -20,7 +19,8 @@
 		6DDE18DC13646DA700CECF65 /* scaletab.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D413646DA700CECF65 /* scaletab.c */; };
 		6DDE18DD13646DA700CECF65 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D513646DA700CECF65 /* table.c */; };
 		6DDE18E313646F8800CECF65 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE18E213646F8800CECF65 /* libiconv.dylib */; };
-		8DD76FAC0486AB0100D96B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		6DDE1919136472BC00CECF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE1918136472BC00CECF65 /* Foundation.framework */; };
+		8DD76FAC0486AB0100D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76FB00486AB0100D96B5E /* xcfinfo2plist.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6DDE18B7136458C300CECF65 /* base-enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "base-enums.h"; sourceTree = "<group>"; };
 		6DDE18B8136458C300CECF65 /* gimpbaseenums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gimpbaseenums.h; sourceTree = "<group>"; };
 		6DDE18B9136458C300CECF65 /* xcf-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcf-private.h"; sourceTree = "<group>"; };
@@ -59,6 +59,7 @@
 		6DDE18D413646DA700CECF65 /* scaletab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scaletab.c; sourceTree = "<group>"; };
 		6DDE18D513646DA700CECF65 /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = table.c; sourceTree = "<group>"; };
 		6DDE18E213646F8800CECF65 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		6DDE1918136472BC00CECF65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DD76FB20486AB0100D96B5E /* xcfinfo2plist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo2plist; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = xcfinfo2plist.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DDE18E313646F8800CECF65 /* libiconv.dylib in Frameworks */,
+				6DDE1919136472BC00CECF65 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				6DDE18B0136458A700CECF65 /* xcftools-1.0.7 */,
-				08FB7796FE84155DC02AAC07 /* main.c */,
+				08FB7796FE84155DC02AAC07 /* main.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 		6DDE18E413646F9900CECF65 /* Libraries & Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DDE1918136472BC00CECF65 /* Foundation.framework */,
 				6DDE18E213646F8800CECF65 /* libiconv.dylib */,
 			);
 			name = "Libraries & Frameworks";
@@ -203,8 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76FAC0486AB0100D96B5E /* main.c in Sources */,
-				6DDE18BB1364596B00CECF65 /* xcfinfo.c in Sources */,
+				8DD76FAC0486AB0100D96B5E /* main.m in Sources */,
 				6DDE18C113646CCD00CECF65 /* enums.c in Sources */,
 				6DDE18CA13646D6800CECF65 /* utils.c in Sources */,
 				6DDE18CB13646D6800CECF65 /* xcf-general.c in Sources */,
