@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		6D25B59113699D5E0024953C /* Build All Targets */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6D25B5A613699D840024953C /* Build configuration list for PBXAggregateTarget "Build All Targets" */;
+			buildPhases = (
+			);
+			dependencies = (
+				6D25B59513699D660024953C /* PBXTargetDependency */,
+				6D25B59713699D660024953C /* PBXTargetDependency */,
+			);
+			name = "Build All Targets";
+			productName = "Build All Targets";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		6D25B54813699BC00024953C /* enums.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C013646CCD00CECF65 /* enums.c */; };
 		6D25B54913699BC00024953C /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C813646D6800CECF65 /* utils.c */; };
@@ -41,6 +56,23 @@
 		8DD76FB00486AB0100D96B5E /* xcfinfo2plist.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6D25B59413699D660024953C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76FA90486AB0100D96B5E /* xcfinfo2plist */;
+			remoteInfo = xcfinfo2plist;
+		};
+		6D25B59613699D660024953C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D25B54513699BC00024953C /* xcfinfo */;
+			remoteInfo = xcfinfo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		6D25B55713699BC00024953C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -66,7 +98,7 @@
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6D25B55C13699BC00024953C /* xcfinfo2plist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo2plist; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D25B55C13699BC00024953C /* xcfinfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDE18B7136458C300CECF65 /* base-enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "base-enums.h"; sourceTree = "<group>"; };
 		6DDE18B8136458C300CECF65 /* gimpbaseenums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gimpbaseenums.h; sourceTree = "<group>"; };
 		6DDE18B9136458C300CECF65 /* xcf-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcf-private.h"; sourceTree = "<group>"; };
@@ -142,12 +174,12 @@
 			isa = PBXGroup;
 			children = (
 				8DD76FB20486AB0100D96B5E /* xcfinfo2plist */,
-				6D25B55C13699BC00024953C /* xcfinfo2plist */,
+				6D25B55C13699BC00024953C /* xcfinfo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DDE18B0136458A700CECF65 /* xcftools-1.0.7 */ = {
+		6D25B57613699C650024953C /* internal */ = {
 			isa = PBXGroup;
 			children = (
 				6DDE18BD13645AB300CECF65 /* config.h */,
@@ -165,6 +197,14 @@
 				6DDE18D313646DA700CECF65 /* pixels.c */,
 				6DDE18D413646DA700CECF65 /* scaletab.c */,
 				6DDE18D513646DA700CECF65 /* table.c */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		6DDE18B0136458A700CECF65 /* xcftools-1.0.7 */ = {
+			isa = PBXGroup;
+			children = (
+				6D25B57613699C650024953C /* internal */,
 				6DDE18BA1364596B00CECF65 /* xcfinfo.c */,
 				6DDE18B6136458C300CECF65 /* gimp */,
 			);
@@ -216,7 +256,7 @@
 			name = xcfinfo;
 			productInstallPath = "$(HOME)/bin";
 			productName = xcfinfo2plist;
-			productReference = 6D25B55C13699BC00024953C /* xcfinfo2plist */;
+			productReference = 6D25B55C13699BC00024953C /* xcfinfo */;
 			productType = "com.apple.product-type.tool";
 		};
 		8DD76FA90486AB0100D96B5E /* xcfinfo2plist */ = {
@@ -258,6 +298,7 @@
 			targets = (
 				8DD76FA90486AB0100D96B5E /* xcfinfo2plist */,
 				6D25B54513699BC00024953C /* xcfinfo */,
+				6D25B59113699D5E0024953C /* Build All Targets */,
 			);
 		};
 /* End PBXProject section */
@@ -304,6 +345,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D25B59513699D660024953C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD76FA90486AB0100D96B5E /* xcfinfo2plist */;
+			targetProxy = 6D25B59413699D660024953C /* PBXContainerItemProxy */;
+		};
+		6D25B59713699D660024953C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D25B54513699BC00024953C /* xcfinfo */;
+			targetProxy = 6D25B59613699D660024953C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB928608733DD80010E9CD /* Debug */ = {
@@ -367,7 +421,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = xcfinfo2plist;
+				PRODUCT_NAME = xcfinfo;
 			};
 			name = Debug;
 		};
@@ -379,6 +433,27 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = xcfinfo2plist;
+			};
+			name = Release;
+		};
+		6D25B59213699D5E0024953C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build All Targets";
+			};
+			name = Debug;
+		};
+		6D25B59313699D5E0024953C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build All Targets";
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -408,6 +483,15 @@
 			buildConfigurations = (
 				6D25B55A13699BC00024953C /* Debug */,
 				6D25B55B13699BC00024953C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D25B5A613699D840024953C /* Build configuration list for PBXAggregateTarget "Build All Targets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D25B59213699D5E0024953C /* Debug */,
+				6D25B59313699D5E0024953C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
