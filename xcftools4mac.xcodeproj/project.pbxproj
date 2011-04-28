@@ -91,7 +91,7 @@
 		6DDE18E313646F8800CECF65 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE18E213646F8800CECF65 /* libiconv.dylib */; };
 		6DDE1919136472BC00CECF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE1918136472BC00CECF65 /* Foundation.framework */; };
 		6DDE19CB1364848C00CECF65 /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE19CA1364848C00CECF65 /* DebugLog.m */; };
-		8DD76FAC0486AB0100D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8DD76FAC0486AB0100D96B5E /* xcfinfo2plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* xcfinfo2plist.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76FB00486AB0100D96B5E /* xcfinfo2plist.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */; };
 /* End PBXBuildFile section */
 
@@ -100,22 +100,29 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DD76FA90486AB0100D96B5E /* xcfinfo2plist */;
+			remoteGlobalIDString = 8DD76FA90486AB0100D96B5E;
 			remoteInfo = xcfinfo2plist;
 		};
 		6D25B59613699D660024953C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6D25B54513699BC00024953C /* xcfinfo */;
+			remoteGlobalIDString = 6D25B54513699BC00024953C;
 			remoteInfo = xcfinfo;
 		};
 		6D25B6691369A1930024953C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6D25B5AA13699E370024953C /* xcf2png */;
+			remoteGlobalIDString = 6D25B5AA13699E370024953C;
 			remoteInfo = xcf2png;
+		};
+		6D25B69B1369A4460024953C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D25B6451369A08E0024953C;
+			remoteInfo = libpng;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -153,7 +160,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08FB7796FE84155DC02AAC07 /* xcfinfo2plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcfinfo2plist.m; sourceTree = "<group>"; };
 		6D25B55C13699BC00024953C /* xcfinfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D25B5A713699DC20024953C /* xcf2png.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xcf2png.c; sourceTree = "<group>"; };
 		6D25B5A813699DF30024953C /* xcf2png.oi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xcf2png.oi; sourceTree = "<group>"; };
@@ -270,7 +277,7 @@
 				6DDE19CA1364848C00CECF65 /* DebugLog.m */,
 				6D25B6231369A0260024953C /* libpng */,
 				6DDE18B0136458A700CECF65 /* xcftools-1.0.7 */,
-				08FB7796FE84155DC02AAC07 /* main.m */,
+				08FB7796FE84155DC02AAC07 /* xcfinfo2plist.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 		6D25B57613699C650024953C /* internal */ = {
 			isa = PBXGroup;
 			children = (
+				6DDE18B6136458C300CECF65 /* gimp */,
 				6D25B5A813699DF30024953C /* xcf2png.oi */,
 				6DDE18BD13645AB300CECF65 /* config.h */,
 				6DDE18BC1364597F00CECF65 /* xcftools.h */,
@@ -346,7 +354,6 @@
 				6D25B57613699C650024953C /* internal */,
 				6DDE18BA1364596B00CECF65 /* xcfinfo.c */,
 				6D25B5A713699DC20024953C /* xcf2png.c */,
-				6DDE18B6136458C300CECF65 /* gimp */,
 			);
 			path = "xcftools-1.0.7";
 			sourceTree = "<group>";
@@ -421,6 +428,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6D25B69C1369A4460024953C /* PBXTargetDependency */,
 			);
 			name = xcf2png;
 			productInstallPath = "$(HOME)/bin";
@@ -468,7 +476,7 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "xcfinfo2plist" */;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "xcftools4mac" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -562,7 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76FAC0486AB0100D96B5E /* main.m in Sources */,
+				8DD76FAC0486AB0100D96B5E /* xcfinfo2plist.m in Sources */,
 				6DDE18C113646CCD00CECF65 /* enums.c in Sources */,
 				6DDE18CA13646D6800CECF65 /* utils.c in Sources */,
 				6DDE18CB13646D6800CECF65 /* xcf-general.c in Sources */,
@@ -595,6 +603,11 @@
 			isa = PBXTargetDependency;
 			target = 6D25B5AA13699E370024953C /* xcf2png */;
 			targetProxy = 6D25B6691369A1930024953C /* PBXContainerItemProxy */;
+		};
+		6D25B69C1369A4460024953C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D25B6451369A08E0024953C /* libpng */;
+			targetProxy = 6D25B69B1369A4460024953C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -775,7 +788,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "xcfinfo2plist" */ = {
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "xcftools4mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB928A08733DD80010E9CD /* Debug */,
