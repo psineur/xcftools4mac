@@ -19,7 +19,7 @@
 #include "xcftools.h"
 #include "flatten.h"
 #include "palette.h"
-#include <png.h>
+#include "png.h"
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
