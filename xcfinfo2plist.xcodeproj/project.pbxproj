@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D25B54813699BC00024953C /* enums.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C013646CCD00CECF65 /* enums.c */; };
+		6D25B54913699BC00024953C /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C813646D6800CECF65 /* utils.c */; };
+		6D25B54A13699BC00024953C /* xcf-general.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C913646D6800CECF65 /* xcf-general.c */; };
+		6D25B54B13699BC00024953C /* flatspec.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18CE13646DA700CECF65 /* flatspec.c */; };
+		6D25B54C13699BC00024953C /* flatten.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18CF13646DA700CECF65 /* flatten.c */; };
+		6D25B54D13699BC00024953C /* io-unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D013646DA700CECF65 /* io-unix.c */; };
+		6D25B54E13699BC00024953C /* nlsini.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D113646DA700CECF65 /* nlsini.c */; };
+		6D25B54F13699BC00024953C /* palette.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D213646DA700CECF65 /* palette.c */; };
+		6D25B55013699BC00024953C /* pixels.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D313646DA700CECF65 /* pixels.c */; };
+		6D25B55113699BC00024953C /* scaletab.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D413646DA700CECF65 /* scaletab.c */; };
+		6D25B55213699BC00024953C /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18D513646DA700CECF65 /* table.c */; };
+		6D25B55313699BC00024953C /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE19CA1364848C00CECF65 /* DebugLog.m */; };
+		6D25B55513699BC00024953C /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE18E213646F8800CECF65 /* libiconv.dylib */; };
+		6D25B55613699BC00024953C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE1918136472BC00CECF65 /* Foundation.framework */; };
+		6D25B55813699BC00024953C /* xcfinfo2plist.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* xcfinfo2plist.1 */; };
+		6D25B55E13699BD20024953C /* xcfinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18BA1364596B00CECF65 /* xcfinfo.c */; };
 		6DDE18C113646CCD00CECF65 /* enums.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C013646CCD00CECF65 /* enums.c */; };
 		6DDE18CA13646D6800CECF65 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C813646D6800CECF65 /* utils.c */; };
 		6DDE18CB13646D6800CECF65 /* xcf-general.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE18C913646D6800CECF65 /* xcf-general.c */; };
@@ -26,6 +42,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6D25B55713699BC00024953C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				6D25B55813699BC00024953C /* xcfinfo2plist.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
@@ -40,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D25B55C13699BC00024953C /* xcfinfo2plist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo2plist; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDE18B7136458C300CECF65 /* base-enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "base-enums.h"; sourceTree = "<group>"; };
 		6DDE18B8136458C300CECF65 /* gimpbaseenums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gimpbaseenums.h; sourceTree = "<group>"; };
 		6DDE18B9136458C300CECF65 /* xcf-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcf-private.h"; sourceTree = "<group>"; };
@@ -68,6 +95,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6D25B55413699BC00024953C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D25B55513699BC00024953C /* libiconv.dylib in Frameworks */,
+				6D25B55613699BC00024953C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD76FB20486AB0100D96B5E /* xcfinfo2plist */,
+				6D25B55C13699BC00024953C /* xcfinfo2plist */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +201,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6D25B54513699BC00024953C /* xcfinfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D25B55913699BC00024953C /* Build configuration list for PBXNativeTarget "xcfinfo" */;
+			buildPhases = (
+				6D25B54613699BC00024953C /* Sources */,
+				6D25B55413699BC00024953C /* Frameworks */,
+				6D25B55713699BC00024953C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xcfinfo;
+			productInstallPath = "$(HOME)/bin";
+			productName = xcfinfo2plist;
+			productReference = 6D25B55C13699BC00024953C /* xcfinfo2plist */;
+			productType = "com.apple.product-type.tool";
+		};
 		8DD76FA90486AB0100D96B5E /* xcfinfo2plist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "xcfinfo2plist" */;
@@ -202,11 +257,32 @@
 			projectRoot = "";
 			targets = (
 				8DD76FA90486AB0100D96B5E /* xcfinfo2plist */,
+				6D25B54513699BC00024953C /* xcfinfo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D25B54613699BC00024953C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D25B54813699BC00024953C /* enums.c in Sources */,
+				6D25B54913699BC00024953C /* utils.c in Sources */,
+				6D25B54A13699BC00024953C /* xcf-general.c in Sources */,
+				6D25B54B13699BC00024953C /* flatspec.c in Sources */,
+				6D25B54C13699BC00024953C /* flatten.c in Sources */,
+				6D25B54D13699BC00024953C /* io-unix.c in Sources */,
+				6D25B54E13699BC00024953C /* nlsini.c in Sources */,
+				6D25B54F13699BC00024953C /* palette.c in Sources */,
+				6D25B55013699BC00024953C /* pixels.c in Sources */,
+				6D25B55113699BC00024953C /* scaletab.c in Sources */,
+				6D25B55213699BC00024953C /* table.c in Sources */,
+				6D25B55313699BC00024953C /* DebugLog.m in Sources */,
+				6D25B55E13699BD20024953C /* xcfinfo.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD76FAB0486AB0100D96B5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +357,31 @@
 			};
 			name = Release;
 		};
+		6D25B55A13699BC00024953C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = xcfinfo2plist;
+			};
+			name = Debug;
+		};
+		6D25B55B13699BC00024953C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = xcfinfo2plist;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -298,6 +399,15 @@
 			buildConfigurations = (
 				1DEB928A08733DD80010E9CD /* Debug */,
 				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D25B55913699BC00024953C /* Build configuration list for PBXNativeTarget "xcfinfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D25B55A13699BC00024953C /* Debug */,
+				6D25B55B13699BC00024953C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
