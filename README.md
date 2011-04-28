@@ -23,9 +23,6 @@ converts XCF files to PNG format, flattening layers if necessary. Transparency c
 lists information about layers in an XCF file.
 The tools can either flatten the XCF file as given, or extract specific layers named on the command line.
 
-Licensed as GPL2. Sources at http://henning.makholm.net/xcftools/, and also in Debian starting with the "etch" release.
-
-TODO
-=====================
-Looks like xcf2png can export individual layers from xcf. Make it possible to export them all by one command line with detecting duplicates and saving names of new pngs in plist. 
-
+Xcftools was written by Henning Makholm <henning@makholm.net>   
+Sources at http://henning.makholm.net/xcftools/, and also in Debian starting with the "etch" release.   
+It is hereby in the public domain.
