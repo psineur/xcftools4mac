@@ -219,6 +219,7 @@
 		6D25B6811369A2730024953C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6D2CF0DB1429D92C00F15FFA /* xcfinfo2anim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcfinfo2anim; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2CF0DE1429D99F00F15FFA /* xcfinfo2anim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcfinfo2anim.m; sourceTree = "<group>"; };
+		6D2CF0F11429E01B00F15FFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		6DDE18B7136458C300CECF65 /* base-enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "base-enums.h"; sourceTree = "<group>"; };
 		6DDE18B8136458C300CECF65 /* gimpbaseenums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gimpbaseenums.h; sourceTree = "<group>"; };
 		6DDE18B9136458C300CECF65 /* xcf-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcf-private.h"; sourceTree = "<group>"; };
@@ -298,6 +299,7 @@
 		08FB7794FE84155DC02AAC07 /* xcfinfo2plist */ = {
 			isa = PBXGroup;
 			children = (
+				6D2CF0F11429E01B00F15FFA /* README.md */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				6DDE18E413646F9900CECF65 /* Libraries & Frameworks */,

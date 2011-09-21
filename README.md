@@ -8,6 +8,16 @@ Usage:
 
     xcfinfo2plist input.xcf output.plist
 
+xcfinfo2anim
+=========================
+Another simple wrap around for xcfinfo.  
+Creates Cocos2D-iPhone Animation Plist file with default delay & animation name.
+Frames names are equal to layers names in XCF.
+
+Usage:
+
+    xcfinfo2anim input.xcf output.plist
+
 Xcftools by Henning Makholm
 =====================
 
