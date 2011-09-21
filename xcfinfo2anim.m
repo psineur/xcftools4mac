@@ -109,13 +109,20 @@ main(int argc,char **argv)
 		[frames addObject: [NSString stringWithFormat:@"%s",XCF.layers[i].name]];
 	}
     [animation setValue:frames forKey:@"frames"];
-	
-	// Save to outfile
+    
+    
+    // Prepare animations dictionary.
     NSMutableDictionary *animations = [NSMutableDictionary dictionaryWithCapacity: 1];
 	[animations setObject: animation forKey:@"animation"];
+	
+    // Prepare root dictionary.
+    NSDictionary *rootPlistDict = [NSDictionary dictionaryWithObject:animations forKey:@"animations"];
+	
+    // Save to outfile.
+    
 	NSString *savePath = [NSString stringWithFormat:@"%s", outfile];
 	TinyLog(@"Writing Dictionary to %@", savePath);	
-	[animations writeToFile:savePath atomically: YES];
+	[rootPlistDict writeToFile:savePath atomically: YES];
 	TinyLog(@"Done!");
 	
 	[pool release];
