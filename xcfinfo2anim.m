@@ -97,44 +97,25 @@ main(int argc,char **argv)
 	
 	TinyLog(@"Preparing Dictionary...");
 	// Add XCF File info
-	NSMutableDictionary *documentInfo = [NSMutableDictionary dictionaryWithCapacity: 7];
-	[documentInfo setObject: [NSNumber numberWithInt: XCF.version] forKey:@"Version"];
-	[documentInfo setObject: [NSNumber numberWithInt: XCF.width]  forKey:@"Width" ];
-	[documentInfo setObject: [NSNumber numberWithInt: XCF.height]  forKey:@"Height" ];
-	[documentInfo setObject: [NSString stringWithFormat:@"%s",_(showGimpImageBaseType(XCF.type)) ]  forKey:@"Type" ];
-	[documentInfo setObject: [NSString stringWithFormat:@"%s",_(showXcfCompressionType(XCF.compression)) ]  forKey:@"Compression" ];
+	NSMutableDictionary *animation = [NSMutableDictionary dictionaryWithCapacity: 2];
+    [animation setValue: [NSNumber numberWithFloat: 0.033f] forKey:@"delay"];
 	
 	
-	// Prepare Layers Array
-	NSMutableArray *layers = [NSMutableArray arrayWithCapacity: (NSUInteger)XCF.numLayers ];
+	// Prepare Frames Array from Layers
+	NSMutableArray *frames = [NSMutableArray arrayWithCapacity: (NSUInteger)XCF.numLayers ];
 	
 	for( i = 0 ; i < XCF.numLayers ; ++i)
 	{
-		NSMutableDictionary *layer = [NSMutableDictionary dictionaryWithCapacity: 10];
-		[layer setObject:[NSString stringWithFormat:@"%s",XCF.layers[i].name ] forKey:@"Name"];
-		
-		[layer setObject: [NSNumber numberWithInt:XCF.layers[i].dim.c.l ] forKey: @"X"];
-		[layer setObject: [NSNumber numberWithInt:XCF.height - XCF.layers[i].dim.c.t - XCF.layers[i].dim.height ] forKey: @"Y"]; 
-		[layer setObject: [NSNumber numberWithInt:XCF.layers[i].dim.width] forKey: @"Width"];
-		[layer setObject: [NSNumber numberWithInt:XCF.layers[i].dim.height] forKey: @"Height"];
-		
-		[layer setObject:[NSNumber numberWithBool: (XCF.layers[i].isVisible) ? YES : NO] forKey:@"Visible"];
-		[layer setObject:[NSNumber numberWithInt: XCF.layers[i].opacity ] forKey:@"Opacity"];		
-		
-		[layer setObject: [NSString stringWithFormat:@"%s",_(showGimpImageType(XCF.layers[i].type))] forKey: @"Type" ];		
-		[layer setObject: [NSString stringWithFormat:@"%s",_(showGimpLayerModeEffects(XCF.layers[i].mode))] forKey: @"Mode"];		
-		[layer setObject: [NSNumber numberWithBool: (XCF.layers[i].hasMask) ? YES : NO ] forKey:@"HasMask"];
-		
-		[layers addObject: layer];
+		[frames addObject: [NSString stringWithFormat:@"%s",XCF.layers[i].name]];
 	}
-	
-	// Add Layer Info to Dict
-	[documentInfo setObject: layers forKey:@"Layers"];
+    [animation setValue:frames forKey:@"frames"];
 	
 	// Save to outfile
+    NSMutableDictionary *animations = [NSMutableDictionary dictionaryWithCapacity: 1];
+	[animations setObject: animation forKey:@"animation"];
 	NSString *savePath = [NSString stringWithFormat:@"%s", outfile];
 	TinyLog(@"Writing Dictionary to %@", savePath);	
-	[documentInfo writeToFile:savePath atomically: YES];
+	[animations writeToFile:savePath atomically: YES];
 	TinyLog(@"Done!");
 	
 	[pool release];
