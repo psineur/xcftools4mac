@@ -13,8 +13,9 @@
 			buildPhases = (
 			);
 			dependencies = (
-				6D25B59513699D660024953C /* PBXTargetDependency */,
 				6D25B59713699D660024953C /* PBXTargetDependency */,
+				6D25B59513699D660024953C /* PBXTargetDependency */,
+				6D1B3A81142F811900D959A1 /* PBXTargetDependency */,
 				6D25B66A1369A1930024953C /* PBXTargetDependency */,
 			);
 			name = "Build All Targets";
@@ -112,6 +113,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D1B3A80142F811900D959A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D2CF0C41429D92C00F15FFA;
+			remoteInfo = xcfinfo2anim;
+		};
 		6D25B59413699D660024953C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
@@ -669,6 +677,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D1B3A81142F811900D959A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D2CF0C41429D92C00F15FFA /* xcfinfo2anim */;
+			targetProxy = 6D1B3A80142F811900D959A1 /* PBXContainerItemProxy */;
+		};
 		6D25B59513699D660024953C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DD76FA90486AB0100D96B5E /* xcfinfo2plist */;
@@ -764,7 +777,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = xcfinfo2plist;
+				PRODUCT_NAME = xcfinfo;
 			};
 			name = Release;
 		};
@@ -810,7 +823,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = xcfinfo2plist;
+				PRODUCT_NAME = xcf2png;
 			};
 			name = Release;
 		};
@@ -842,17 +855,12 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = "";
 				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
+				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
-				PRODUCT_NAME = libpng;
-				ZERO_LINK = NO;
+				PRODUCT_NAME = png;
+				ZERO_LINK = "";
 			};
 			name = Release;
 		};
